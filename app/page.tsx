@@ -117,7 +117,7 @@ export default function Dashboard() {
     if (!searchQuery) return;
     setIsAnalyzing(true);
     try {
-      const response = await fetch('http://localhost:8000/analyze', {
+      const response = await fetch('https://intelligent-portfolio-tracker-backend.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ticker: searchQuery }),
